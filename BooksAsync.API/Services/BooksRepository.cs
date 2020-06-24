@@ -44,5 +44,15 @@ namespace BooksAsync.API.Services
         {
             return await _context.Books.Include(b => b.Author).ToListAsync();
         }
+
+        public Book GetBook(Guid id)
+        {
+            return _context.Books.Include(b => b.Author).FirstOrDefault(b => b.Id == id);
+        }
+
+        public IEnumerable<Book> GetBooks()
+        {
+            return _context.Books.Include(b => b.Author).ToList();
+        }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace BooksAsync.API.Services
@@ -10,5 +9,9 @@ namespace BooksAsync.API.Services
         Task<IEnumerable<Entities.Book>> GetBooksAsync();
 
         Task<Entities.Book> GetBookAsync(Guid id);
+
+        public Entities.Book GetBook(Guid id);
+
+        IEnumerable<Entities.Book> GetBooks();
     }
 }
