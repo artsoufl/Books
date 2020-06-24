@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using BooksAsync.API.Contexts;
 using BooksAsync.API.Services;
 using Microsoft.AspNetCore.Builder;
@@ -34,6 +35,8 @@ namespace BooksAsync.API
             services.AddDbContext<BookContext>(o => o.UseSqlServer(connectioString));
 
             services.AddScoped<IBooksRepository, BooksRepository>();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
