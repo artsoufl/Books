@@ -10,6 +10,8 @@ namespace BooksAsync.API.Services
 
         Task<Entities.Book> GetBookAsync(Guid id);
 
+        Task<IEnumerable<Entities.Book>> GetBooksAsync(IEnumerable<Guid> bookIds);
+
         public Entities.Book GetBook(Guid id);
 
         IEnumerable<Entities.Book> GetBooks();
