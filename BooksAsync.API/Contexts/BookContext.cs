@@ -49,35 +49,35 @@ namespace BooksAsync.API.Contexts
             modelBuilder.Entity<Book>().HasData(
                 new Book
                 {
-                    Id = Guid.Parse("d28888e9-2ba9-473a-qwer-e38cb54f9b58"),
+                    Id = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b11"),
                     AuthorId = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b35"),
                     Title = "The winds of winter",
                     Description = "The book that seems impossible to write"
                 },
                 new Book
                 {
-                    Id = Guid.Parse("d28888e9-2ba9-473a-asdf-e38cb54f9b58"),
+                    Id = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b22"),
                     AuthorId = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b35"),
                     Title = "A Game of Thrones",
                     Description = "It is a novel"
                 },
                 new Book
                 {
-                    Id = Guid.Parse("d28888e9-2ba9-473a-zxcv-e38cb54f9b58"),
+                    Id = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b33"),
                     AuthorId = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b46"),
                     Title = "Mythos",
                     Description = "The greek myths"
                 },
                 new Book
                 {
-                    Id = Guid.Parse("d28888e9-2ba9-473a-poiu-e38cb54f9b58"),
+                    Id = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b44"),
                     AuthorId = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b57"),
                     Title = "American Tabloid",
                     Description = "Is a 1995 novel"
                 },
                 new Book
                 {
-                    Id = Guid.Parse("d28888e9-2ba9-473a-lkjh-e38cb54f9b58"),
+                    Id = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b55"),
                     AuthorId = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b68"),
                     Title = "The hitchhiker",
                     Description = "Is guide to the galaxy"
