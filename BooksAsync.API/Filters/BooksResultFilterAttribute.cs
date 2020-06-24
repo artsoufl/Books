@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace BooksAsync.API.Filters
 {
-    public class BookResultFilterAttribute : ResultFilterAttribute
+    public class BooksResultFilterAttribute : ResultFilterAttribute
     {
         public override async Task OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next)
         {
-            var result =  context.Result as ObjectResult;
+            var result = context.Result as ObjectResult;
             if (result?.Value == null || result.StatusCode < 200
                 || result.StatusCode >= 300)
             {
@@ -23,7 +23,7 @@ namespace BooksAsync.API.Filters
 
             var mapper = context.HttpContext.RequestServices.GetRequiredService<IMapper>();
 
-            result.Value = mapper.Map<Models.Book>(result.Value);
+            result.Value = mapper.Map<IEnumerable<Models.Book>>(result.Value);
 
             await next();
             //return base.OnResultExecutionAsync(context, next);
