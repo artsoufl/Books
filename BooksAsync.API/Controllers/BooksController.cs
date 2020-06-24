@@ -57,6 +57,9 @@ namespace BooksAsync.API.Controllers
 
             await _booksRepository.SaveChangesAsync();
 
+            // this will fill the author data as well
+            await _booksRepository.GetBookAsync(bookEntity.Id);
+
             return CreatedAtRoute("GetBook", new { id = bookEntity.Id }, bookEntity);
         }
     }
